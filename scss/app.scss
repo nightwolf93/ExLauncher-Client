@@ -70,12 +70,27 @@ body {
 			position: absolute;
 			right: 5px;
 			top: 5px;
+			cursor: pointer;
 		}
 
 		.bt-reduce {
 			@extend .bt-close;
 			right: 25px;
 			background-color: rgb(196, 130, 41);
+		}
+
+		.bt-settings {
+			@extend .bt-close;
+			left: 5px;
+			background-color: rgb(57, 121, 157);
+			text-align: center;
+
+			img {
+				position: absolute;
+				width: 8px;
+				top: 3px;
+				left: 3px;
+			}
 		}
 	}
 

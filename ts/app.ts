@@ -1,24 +1,24 @@
+/// <reference path="../typings/tsd.d.ts"/>
+
 module ExLauncher {
   export class App {
 
     constructor() {
-      this.setDisplayProgressBar(true)
-      TweenMax.fromTo($(".progress-background"), 10, {width: '0%'}, {width: '100%', onComplete: () => {
-          this.setDisplayProgressBar(false)
-        }});
+      UI.setProgressBarDisplay(true);
+      this.checkUpdate();
     }
 
-    setDisplayProgressBar(display: bool): void {
-      if(display){
-        TweenMax.to($(".progress-zone"), 1, {top: '25px'});
-      }
-      else {
-        TweenMax.to($(".progress-zone"), 1, {top: '0px'});
-      }
+    checkUpdate(): void {
+      setTimeout(() => {
+        UI.setProgressBarText(I18N.getText("SEARCH_FOR_UPDATE"));
+      }, 1000);
+      setInterval(() => {
+        UI.setProgressBarText("Téléchargement des mises à jour .. 0%");
+      }, 4000);
     }
   }
 }
 
 $(function(){
-  var app = new ExLauncher.App();
+  var app: ExLauncher.App = new ExLauncher.App();
 });

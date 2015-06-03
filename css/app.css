@@ -53,17 +53,27 @@ body {
       height: 25px;
       font-size: 12px;
       font-weight: bold; }
-    #main-content .top-bar .bt-close, #main-content .top-bar .bt-reduce {
+    #main-content .top-bar .bt-close, #main-content .top-bar .bt-reduce, #main-content .top-bar .bt-settings {
       width: 15px;
       height: 15px;
       border-radius: 15px;
       background-color: #b94546;
       position: absolute;
       right: 5px;
-      top: 5px; }
+      top: 5px;
+      cursor: pointer; }
     #main-content .top-bar .bt-reduce {
       right: 25px;
       background-color: #c48229; }
+    #main-content .top-bar .bt-settings {
+      left: 5px;
+      background-color: #39799d;
+      text-align: center; }
+      #main-content .top-bar .bt-settings img {
+        position: absolute;
+        width: 8px;
+        top: 3px;
+        left: 3px; }
   #main-content .progress-zone {
     position: absolute;
     top: 0;
